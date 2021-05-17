@@ -4,3 +4,4 @@ This a simple game of hangman created using python which saves and outputs all t
 The user must try and guess the randomly selected word with letters/words. If the user makes a mistake a hangman will be drawn.
 ## Screenshots of the app running
 ![SCREENSHOT](https://github.com/igorganch/HangmanPython/blob/main/python%20screenshots/cap.PNG)
+![SCREENSHOT](https://github.com/igorganch/HangmanPython/blob/main/python%20screenshots/Cap2.PNG)
