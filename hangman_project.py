@@ -1,7 +1,7 @@
 import random
 import pymongo 
 from pymongo import MongoClient
-import os 
+
 
 
 
@@ -14,14 +14,10 @@ class Player:
         this.score = 110 
     def calculateScore(this):
 
-        correct_guesses = this.guesses - this.errors
         this.score =  this.score - (this.errors * 10) 
 
     def printScore(this):
         print("Player : " + this.name + "\n" + "Score : " + str(this.score) + "/110" + "\n" + "Guesses : " + str(this.guesses) + "\nErrors : " + str(this.errors))    
-
-def clear():
-    os.system('cls')
 
 
 def create_collection():
@@ -39,8 +35,8 @@ def create_collection():
 
 def connect_mongodb() :
     client = pymongo.MongoClient("mongodb+srv://iganch:325343945@cluster0.arzco.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-    db = client.database
-    col = db.HangmanScores
+    db = client.test
+    col = db.hangmanscores
     return col
 
 
@@ -106,7 +102,7 @@ guesses = []
 duplicate = False
 errors = []
 
-collection = create_collection()
+collection = connect_mongodb()
 get_players(collection)
 
 print("=================")
